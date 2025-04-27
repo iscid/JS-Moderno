@@ -18,3 +18,13 @@ console.log(producto.informacion);
 console.log(producto.informacion.fabricacion.pais);
 
 // Destructuring de objetos anidados
+// const { nombre, informacion, informacion: { fabricacion, fabricacion: { pais } } } = producto;
+
+const { nombre, precio, disponible, informacion } = producto;
+const { medidas, fabricacion } = informacion;
+const { peso, medida } = medidas;
+const { pais } = fabricacion;
+
+console.log(informacion);
+console.log(`Peso: ${peso} - Medida: ${medida}`);
+console.log(`Pais: ${pais}`);
