@@ -1,8 +1,8 @@
 console.log("Desde objetos");
 
-const nombre = "Monitor de 20 Pulgadas";
-const precio = 300;
-const disponible = true;
+// const nombre = "Monitor de 20 Pulgadas";
+// const precio = 300;
+// const disponible = true;
 
 const producto = {
   nombre: "Monitor de 32 Pulgadas",
@@ -23,3 +23,7 @@ console.log(producto);
 // Eliminar propiedades del objeto
 delete producto.disponible;
 console.log(producto);
+
+// Destructuring de objetos
+const { nombre, precio, disponible } = producto;
+console.log(nombre);
