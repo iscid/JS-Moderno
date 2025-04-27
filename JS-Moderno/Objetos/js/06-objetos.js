@@ -11,3 +11,4 @@ const producto = {
 };
 
 producto.mostrarInfo();
+// Resultado: El producto: Monitor 32 Pulgadas tiene un precio de: 400
