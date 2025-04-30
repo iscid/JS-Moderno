@@ -41,3 +41,46 @@ carrito.push(productoDos);
 carrito.unshift(productoTres);
 
 console.table(carrito);
+
+// Crear un nuevo arreglo a partir de otro
+const nuevoArray = [...meses, ...numeros];
+console.table(nuevoArray);
+
+let nuevoCarrito = [];
+
+const productoCuatro = {
+  nombre: "Alexa echo 3",
+  precio: 25,
+};
+
+// Se llena un nuevo arreglo con otros arreglos utilizando spreed operator
+nuevoCarrito = [productoCuatro, ...carrito, productoDos];
+console.log(nuevoCarrito);
+
+// Elimina el último elemento
+nuevoCarrito.pop();
+
+// Elimina el primer elemento
+nuevoCarrito.shift();
+
+console.table(nuevoCarrito);
+
+// Elimina a partir de una posición en específico, el segundo parámetro es la cantidad de elementos a eliminar
+nuevoCarrito.splice(1, 1);
+
+console.table(nuevoCarrito);
+
+// Destructuring de arrays
+console.table(carrito);
+
+const numerosDos = [10, 20, 30, 40, 50];
+
+// Se asginan con base a la posición
+const [primero] = numerosDos;
+console.log(primero);
+
+const [, , tercero] = numerosDos;
+console.log(tercero);
+
+const [primeroDos, ...nuevoArreglo] = numeros;
+console.log(nuevoArray);
