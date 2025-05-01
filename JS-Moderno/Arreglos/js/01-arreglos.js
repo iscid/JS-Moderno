@@ -24,12 +24,24 @@ console.table(numeros);
 
 const carrito = [];
 
+/*
 function Producto(nombre, precio) {
   (this.nombre = nombre), (this.precio = precio);
 }
 
 const productoUno = new Producto("Monitor Curvo 20 Pulgadas", 600);
 const productoDos = new Producto("Smartphone", 1000);
+*/
+
+const productoUno = {
+  nombre: "Monitor Curvo 20 Pulgadas",
+  precio: 600,
+};
+
+const productoDos = {
+  nombre: "Smartphone",
+  precio: 1000,
+};
 
 const productoTres = {
   nombre: "Tablet",
@@ -84,3 +96,20 @@ console.log(tercero);
 
 const [primeroDos, ...nuevoArreglo] = numeros;
 console.log(nuevoArray);
+
+// Recorre el arreglo mediante un for
+for (let i = 0; i < meses.length; i++) {
+  console.log(`Mes: ${meses[i]}`);
+}
+// Recorrer un arreglo con forEach
+numeros.forEach((numero) => console.log(`Número: ${numero}`));
+
+carrito.forEach((producto) =>
+  console.log(`Producto: ${producto.nombre} - Precio: ${producto.precio}`)
+);
+
+const nuevoArregloDos = carrito.map((producto) => {
+  return `${producto.nombre} - Precio: ${producto.precio}`;
+});
+
+console.log(nuevoArregloDos);
